@@ -4,19 +4,12 @@ CREATE TABLE Hot_dog (
     Ar DECIMAL(5, 2) NOT NULL CHECK (Ar >= 1000)
 );
 
--- Feltetek tábla létrehozása
-CREATE TABLE Feltetek (
-    Id INT PRIMARY KEY,
-    Feltet VARCHAR(20)
-);
-
 -- Hot_dog_feltetek tábla létrehozása a kapcsolatok tárolásához
 CREATE TABLE Hot_dog_feltetek (
     Hot_dog_Azon INT,
     Feltetek_Id INT,
     PRIMARY KEY (Hot_dog_Azon, Feltetek_Id),
-    FOREIGN KEY (Hot_dog_Azon) REFERENCES Hot_dog(Azon),
-    FOREIGN KEY (Feltetek_Id) REFERENCES Feltetek(Id)
+    FOREIGN KEY (Hot_dog_Azon) REFERENCES Hot_dog(Azon)
 );
 
 CREATE TABLE Megrendelo (
