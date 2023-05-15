@@ -1,6 +1,6 @@
 -- Hot_dog tábla létrehozása
 CREATE TABLE Hot_dog (
-    Azon INT PRIMARY KEY CHACK (Azon < 1000),
+    Azon INT PRIMARY KEY CHECK (Azon < 1000),
     Ar DECIMAL(5, 2) NOT NULL CHECK (Ar >= 1000)
 );
 
